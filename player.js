@@ -99,6 +99,10 @@ var _appStateHoc = __webpack_require__(/*! ../lib/app-state-hoc.jsx */ "./src/li
 
 var _appStateHoc2 = _interopRequireDefault(_appStateHoc);
 
+var _titledHoc = __webpack_require__(/*! ../lib/titled-hoc.jsx */ "./src/lib/titled-hoc.jsx");
+
+var _titledHoc2 = _interopRequireDefault(_titledHoc);
+
 var _mode = __webpack_require__(/*! ../reducers/mode */ "./src/reducers/mode.js");
 
 var _player = __webpack_require__(/*! ./player.css */ "./src/playground/player.css");
@@ -154,7 +158,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 var ConnectedPlayer = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Player);
-var WrappedPlayer = (0, _hashParserHoc2.default)((0, _appStateHoc2.default)(ConnectedPlayer));
+var WrappedPlayer = (0, _hashParserHoc2.default)((0, _appStateHoc2.default)((0, _titledHoc2.default)(ConnectedPlayer)));
 
 var appTarget = document.createElement('div');
 document.body.appendChild(appTarget);
